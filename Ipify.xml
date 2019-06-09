@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ipify</name>
+    </assembly>
+    <members>
+        <member name="T:Ipify.GeoIp">
+            <summary>
+            Represent the class containing IP Geolocation Datas
+            </summary>
+        </member>
+        <member name="T:Ipify.IpifyGeoIp">
+            <summary>
+            Represent the static class for making call to Ipiy API to obtain IP Address Geolocation Data from Ipify
+            </summary>
+        </member>
+        <member name="M:Ipify.IpifyGeoIp.RequestGeoIp(System.String,System.String)">
+            <summary>
+            Request Geo IP Datas
+            </summary>
+            <param name="ip">IP Address as string</param>
+            <param name="token">Ipify Token as string</param>
+            <returns>GeoIP datas</returns>
+        </member>
+        <member name="M:Ipify.IpifyGeoIp.RequestGeoIpAsync(System.String,System.String)">
+            <summary>
+            Request Geo IP Datas async 
+            </summary>
+            <param name="ip">IP Address as string</param>
+            <param name="token">Ipify Token as string</param>
+            <returns>GeoIP datas</returns>
+        </member>
+        <member name="M:Ipify.IpifyGeoIp.GetEndpoint(System.String,System.String)">
+            <summary>
+            Build full endpoint
+            </summary>
+            <param name="ip">IP Address as string</param>
+            <param name="token">Ipify Token as string</param>
+            <returns>Full Endpoint</returns>
+        </member>
+        <member name="T:Ipify.IpifyIp">
+            <summary>
+            Represent static class of IP address Request Sync/Async
+            </summary>
+        </member>
+        <member name="M:Ipify.IpifyIp.GetPublicIpAsync(System.Boolean)">
+            <summary>
+            Async Request Public IP Address
+            </summary>
+            <param name="secure">Choose between secure request and unsecure (https/http) by default set as secure</param>
+            <returns>Return public IP Address as a string.</returns>
+        </member>
+        <member name="M:Ipify.IpifyIp.GetPublicIp(System.Boolean)">
+            <summary>
+            Request Public IP Address.
+            </summary>
+            <param name="secure">Choose between secure request and unsecure (https/http) by default set as secure</param>
+            <returns>Return public IP Address as a string.</returns>
+        </member>
+        <member name="M:Ipify.IpifyIp.GetPublicIpV6(System.Boolean)">
+            <summary>
+            Request Public IP Address (v6) try to get IP Address as IPV6.
+            </summary>
+            <param name="secure">Choose between secure request and unsecure (https/http) by default set as secure</param>
+            <returns>Return public IP Address(v6) as a string, if don't will return IPv4 address as string</returns>
+        </member>
+        <member name="M:Ipify.IpifyIp.GetPublicIpV6Async(System.Boolean)">
+            <summary>
+            Asyn Request Public IP Address (v6) try to get IP Address as IPV6.
+            </summary>
+            <param name="secure">Choose between secure request and unsecure (https/http) by default set as secure</param>
+            <returns>Return public IP Address(v6) as a string, if don't will return IPv4 address as string</returns>
+        </member>
+        <member name="M:Ipify.Request.GetRequestResultAsync(System.String)">
+            <summary>
+            Create Http Request
+            </summary>
+            <param name="endpoint">Endpoint of request</param>
+            <returns>Request Result</returns>
+        </member>
+        <member name="M:Ipify.Request.GetRequestResult(System.String)">
+            <summary>
+            Create Async Http Request
+            </summary>
+            <param name="endpoint">Endpoint of request</param>
+            <returns>Request Result</returns>
+        </member>
+    </members>
+</doc>
